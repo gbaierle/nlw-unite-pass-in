@@ -1,0 +1,34 @@
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "title": "Unite Summit",
+    "details": "Programming event",
+    "maxAttendees": 1
+}
+
+###
+
+POST http://localhost:3000/events/3f51b400-342e-442c-9ec8-a59b8a8b53b1/attendees
+Content-Type: application/json
+
+{
+    "name": "Gabriel Baierle",
+    "email": "gbaierle@mail.com"
+}
+
+###
+
+GET http://localhost:3000/events/3f51b400-342e-442c-9ec8-a59b8a8b53b1
+
+###
+
+GET http://localhost:3000/attendees/1/badge
+
+###
+
+GET http://localhost:3000/attendees/1/check-in
+
+###
+
+GET http://localhost:3000/events/3f51b400-342e-442c-9ec8-a59b8a8b53b1/attendees?query=gabriel
